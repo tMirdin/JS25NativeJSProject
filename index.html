@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azret.kg</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ! ======== Navbar Start ======== -->
+    <nav>
+      <div class="nav__left">
+        <img
+          src="https://assets.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e3a57bdb3717fbf9cec_Product_Default.svg"
+          alt="logo"
+        />
+      </div>
+      <div class="nav__center">
+        <ul>
+          <li>Главная</li>
+          <li>Продукты</li>
+          <li>О нас</li>
+          <li>Наши партнеры</li>
+        </ul>
+      </div>
+      <div class="nav__right">
+        <input
+          class="nav__right_inp-search"
+          type="text"
+          placeholder="Лучшее..."
+        />
+        <button class="nav__right_btn-search">Поиск</button>
+      </div>
+    </nav>
+    <!-- ? ======== Navbar End ======== -->
+    <!-- ! ========= Create Start ====== -->
+    <section class="section__add">
+      <div>
+        <input
+          type="text"
+          class="section__add_details"
+          placeholder="Описание"
+        />
+        <input type="number" class="section__add_price" placeholder="Цена" />
+        <input
+          type="number"
+          class="section__add_quantity"
+          placeholder="Количество"
+        />
+        <input
+          type="text"
+          class="section__add_category"
+          placeholder="Категория"
+        />
+        <input type="number" class="section__add_sales" placeholder="Скидки" />
+        <input
+          type="url"
+          class="section__add_url"
+          placeholder="URL изображения"
+        />
+        <button class="section__add_btn-add">Добавить</button>
+      </div>
+    </section>
+    <!-- ? ========= Create End ====== -->
+    <section id="section__read"></section>
+    <!-- ! ========== Read Start ====== -->
+
+    <!-- ? ========== Read End ====== -->
+
+    <!-- ! =========== Edit Start ======= -->
+    <div class="main-modal">
+      <div class="main-modal__window">
+        <button class="window__edit_close">X</button>
+        <input
+          type="text"
+          class="window__edit_details"
+          placeholder="Описание"
+        />
+        <input type="number" class="window__edit_price" placeholder="Цена" />
+        <input
+          type="number"
+          class="window__edit_quantity"
+          placeholder="Количество"
+        />
+        <input
+          type="text"
+          class="window__edit_category"
+          placeholder="Категория"
+        />
+        <input type="number" class="window__edit_sales" placeholder="Скидки" />
+        <input
+          type="url"
+          class="window__edit_url"
+          placeholder="URL изображения"
+        />
+        <button class="window__edit_btn-save">Изменить</button>
+      </div>
+    </div>
+    <!-- ? =========== Edit End ======= -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
