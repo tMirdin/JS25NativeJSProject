@@ -22,28 +22,35 @@ let btnEditSave = document.querySelector(".window__edit_btn-save");
 let mainModal = document.querySelector(".main-modal");
 let btnEditClose = document.querySelector(".window__edit_close");
 
+let inpSearch = document.querySelector(".nav__right_inp-search");
+let searchValue = inpSearch.value;
+
+let prevBtn = document.getElementById("prev-btn");
+let nextBtn = document.getElementById("next-btn");
+let currentPage = 1;
+
 // ! =========== Кодовое слово ==========
-let pinCode = prompt("Введите кодовое слово:");
-let section__add = document.querySelector(".section__add");
-let admin_panel_arr = document.getElementsByClassName("admin-panel");
-// console.log(admin_panel_arr);
-if (pinCode !== "Mirdin") {
-  setTimeout(() => {
-    for (let i of admin_panel_arr) {
-      console.log(i);
-      i.style.display = "none";
-    }
-  }, 100);
-  section__add.style.display = "none";
-} else {
-  setTimeout(() => {
-    for (let i of admin_panel_arr) {
-      console.log(i);
-      i.style.display = "block";
-    }
-  }, 1000);
-  section__add.style.display = "block";
-}
+// let pinCode = prompt("Введите кодовое слово:");
+// let section__add = document.querySelector(".section__add");
+// let admin_panel_arr = document.getElementsByClassName("admin-panel");
+
+// if (pinCode !== "Mirdin") {
+//   // setTimeout(() => {
+//   //   for (let i of admin_panel_arr) {
+//   //     console.log(i);
+//   //     i.style.display = "none";
+//   //   }
+//   // }, 100);
+//   section__add.style.display = "none";
+// } else {
+//   // setTimeout(() => {
+//   //   for (let i of admin_panel_arr) {
+//   //     console.log(i);
+//   //     i.style.display = "block";
+//   //   }
+//   // }, 1000);
+//   section__add.style.display = "block";
+// }
 
 // ! =========== Create Start ===========
 function createProduct(obj) {
@@ -89,7 +96,7 @@ btnAdd.addEventListener("click", () => {
 
 // ! ============ Read Start ============
 function readProducts() {
-  fetch(API)
+  fetch(`${API}?q=${searchValue}&_page=${currentPage}&_limit=6`)
     .then((res) => res.json())
     .then((data) => {
       sectionRead.innerHTML = "";
@@ -129,6 +136,7 @@ function readProducts() {
         `;
       });
     });
+  pageTotal();
 }
 
 readProducts();
@@ -210,3 +218,32 @@ btnEditSave.addEventListener("click", () => {
   mainModal.style.display = "none";
 });
 // ? =============== Edit End ===========
+
+// ! ============ Search Start ==========
+inpSearch.addEventListener("input", (e) => {
+  searchValue = e.target.value;
+  readProducts();
+});
+// ? ============ Search End ==========
+
+// ! ========== Paginate Start =========
+let countPage = 1;
+function pageTotal() {
+  fetch(API)
+    .then((res) => res.json())
+    .then((data) => {
+      countPage = Math.ceil(data.length / 6);
+    });
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentPage <= 1) return;
+  currentPage--;
+  readProducts();
+});
+nextBtn.addEventListener("click", () => {
+  if (currentPage >= countPage) return;
+  currentPage++;
+  readProducts();
+});
+// ? ========== Paginate End ==========
