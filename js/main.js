@@ -2,6 +2,7 @@ const API = "http://localhost:8000/product";
 
 // ? Сохранение тегов в переменные
 
+// инпуты и кнопки для создания новых данных
 let inpDetails = document.querySelector(".section__add_details");
 let inpPrice = document.querySelector(".section__add_price");
 let inpQuantity = document.querySelector(".section__add_quantity");
@@ -10,8 +11,10 @@ let inpCategory = document.querySelector(".section__add_category");
 let inpUrl = document.querySelector(".section__add_url");
 let btnAdd = document.querySelector(".section__add_btn-add");
 
+// тег для отображения данных в браузере
 let sectionRead = document.getElementById("section__read");
 
+// инпуты и кнопки для редактирования
 let inpEditDetails = document.querySelector(".window__edit_details");
 let inpEditPrice = document.querySelector(".window__edit_price");
 let inpEditQuantity = document.querySelector(".window__edit_quantity");
@@ -22,9 +25,11 @@ let btnEditSave = document.querySelector(".window__edit_btn-save");
 let mainModal = document.querySelector(".main-modal");
 let btnEditClose = document.querySelector(".window__edit_close");
 
+//  инпут и переменная для поиска
 let inpSearch = document.querySelector(".nav__right_inp-search");
 let searchValue = inpSearch.value;
 
+// кнопки для пагинации
 let prevBtn = document.getElementById("prev-btn");
 let nextBtn = document.getElementById("next-btn");
 let currentPage = 1;
@@ -229,7 +234,7 @@ inpSearch.addEventListener("input", (e) => {
 // ! ========== Paginate Start =========
 let countPage = 1;
 function pageTotal() {
-  fetch(API)
+  fetch(`${API}?q=${searchValue}`)
     .then((res) => res.json())
     .then((data) => {
       countPage = Math.ceil(data.length / 6);
