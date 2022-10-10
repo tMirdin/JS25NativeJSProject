@@ -34,6 +34,10 @@ let prevBtn = document.getElementById("prev-btn");
 let nextBtn = document.getElementById("next-btn");
 let currentPage = 1;
 
+// Фильтрация
+let form = document.getElementsByTagName("form")[0];
+let category = "";
+
 // ! =========== Кодовое слово ==========
 let section__add = document.querySelector(".section__add");
 let admin_panel_arr = document.getElementsByClassName("admin-panel");
@@ -107,7 +111,9 @@ btnAdd.addEventListener("click", () => {
 
 // ! ============ Read Start ============
 function readProducts() {
-  fetch(`${API}?q=${searchValue}&_page=${currentPage}&_limit=6`)
+  fetch(
+    `${API}?q=${searchValue}&_page=${currentPage}&_limit=6&category=${category}`
+  )
     .then((res) => res.json())
     .then((data) => {
       sectionRead.innerHTML = "";
@@ -259,3 +265,11 @@ nextBtn.addEventListener("click", () => {
   readProducts();
 });
 // ? ========== Paginate End ==========
+
+// ! ========Filter Start =======
+form.addEventListener("change", (e) => {
+  // console.log(e.target.value);
+  category = e.target.value;
+  readProducts();
+});
+// ? ========Filter End =======
