@@ -5,34 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Azret.kg</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d1626d1331.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- ! ======== Navbar Start ======== -->
-    <nav>
-      <div class="nav__left">
-        <img
-          src="https://assets.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e3a57bdb3717fbf9cec_Product_Default.svg"
-          alt="logo"
-        />
+
+    <div class="container">
+      <div class="block">
+        <div class="header">
+          <div class="header_logo">
+            <img src="../images/Logo Coffee.png" alt="" />
+            <h2>TROUBLE MAKERS</h2>
+          </div>
+          <div class="header_center">
+            <ul>
+              <li>Главная</li>
+              <li>Продукты</li>
+              <li>О нас</li>
+              <li>Наши партнеры</li>
+            </ul>
+          </div>
+
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-txt"
+              placeholder="Введите категорию"
+            />
+            <a href="#" class="search-btn"
+              ><img
+                src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon.png"
+                alt=""
+                width="20px"
+            /></a>
+          </div>
+          <div id="open_admin"></div>
+        </div>
       </div>
-      <div class="nav__center">
-        <ul>
-          <li>Главная</li>
-          <li>Продукты</li>
-          <li>О нас</li>
-          <li>Наши партнеры</li>
-        </ul>
-      </div>
-      <div class="nav__right">
-        <input
-          class="nav__right_inp-search"
-          type="text"
-          placeholder="Лучшее..."
-        />
-        <button class="nav__right_btn-search">Поиск</button>
-      </div>
-    </nav>
+    </div>
+    <!-- nav__right_btn-search -->
     <!-- ? ======== Navbar End ======== -->
     <!-- ! ========= Create Start ====== -->
     <section class="section__add">
@@ -64,6 +85,7 @@
     </section>
     <!-- ? ========= Create End ====== -->
     <!-- ! ========== Read Start ====== -->
+
     <section id="section__read"></section>
     <!-- ? ========== Read End ====== -->
 
@@ -104,6 +126,6 @@
     </div>
     <!-- ? =========== Edit End ======= -->
 
-    <script src="./js/main.js"></script>
+    <script src="../js/product.js"></script>
   </body>
 </html>

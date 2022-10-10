@@ -26,7 +26,7 @@ let mainModal = document.querySelector(".main-modal");
 let btnEditClose = document.querySelector(".window__edit_close");
 
 //  инпут и переменная для поиска
-let inpSearch = document.querySelector(".nav__right_inp-search");
+let inpSearch = document.querySelector(".search-txt");
 let searchValue = inpSearch.value;
 
 // кнопки для пагинации
@@ -35,27 +35,33 @@ let nextBtn = document.getElementById("next-btn");
 let currentPage = 1;
 
 // ! =========== Кодовое слово ==========
-// let pinCode = prompt("Введите кодовое слово:");
-// let section__add = document.querySelector(".section__add");
-// let admin_panel_arr = document.getElementsByClassName("admin-panel");
+let section__add = document.querySelector(".section__add");
+let admin_panel_arr = document.getElementsByClassName("admin-panel");
+let clickAdmin = document.getElementById("open_admin");
+let code = "";
 
-// if (pinCode !== "Mirdin") {
-//   // setTimeout(() => {
-//   //   for (let i of admin_panel_arr) {
-//   //     console.log(i);
-//   //     i.style.display = "none";
-//   //   }
-//   // }, 100);
-//   section__add.style.display = "none";
-// } else {
-//   // setTimeout(() => {
-//   //   for (let i of admin_panel_arr) {
-//   //     console.log(i);
-//   //     i.style.display = "block";
-//   //   }
-//   // }, 1000);
-//   section__add.style.display = "block";
-// }
+function adminReturn() {
+  if (code !== "Mirdin") {
+    setTimeout(() => {
+      for (let i of admin_panel_arr) {
+        i.style.display = "none";
+      }
+    }, 50);
+    section__add.style.display = "none";
+  } else {
+    setTimeout(() => {
+      for (let i of admin_panel_arr) {
+        i.style.display = "block";
+      }
+    }, 50);
+    section__add.style.display = "block";
+  }
+}
+
+clickAdmin.addEventListener("click", () => {
+  code = prompt("Введите кодовое слово:");
+  adminReturn();
+});
 
 // ! =========== Create Start ===========
 function createProduct(obj) {
@@ -142,6 +148,7 @@ function readProducts() {
       });
     });
   pageTotal();
+  adminReturn();
 }
 
 readProducts();
