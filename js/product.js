@@ -36,7 +36,7 @@ let currentPage = 1;
 
 // Фильтрация
 let form = document.getElementsByTagName("form")[0];
-let category = "";
+let category = "all";
 
 // ! =========== Кодовое слово ==========
 let section__add = document.querySelector(".section__add");
@@ -112,7 +112,9 @@ btnAdd.addEventListener("click", () => {
 // ! ============ Read Start ============
 function readProducts() {
   fetch(
-    `${API}?q=${searchValue}&_page=${currentPage}&_limit=6&category=${category}`
+    `${API}?q=${searchValue}&_page=${currentPage}&_limit=6&${
+      category === "all" ? "" : "category=" + category
+    }`
   )
     .then((res) => res.json())
     .then((data) => {
