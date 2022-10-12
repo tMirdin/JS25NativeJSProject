@@ -10,6 +10,7 @@ let inpSales = document.querySelector(".section__add_sales");
 let inpCategory = document.querySelector(".section__add_category");
 let inpUrl = document.querySelector(".section__add_url");
 let btnAdd = document.querySelector(".section__add_btn-add");
+let accordion = document.getElementsByClassName("accordion__header")[0];
 
 // тег для отображения данных в браузере
 let sectionRead = document.getElementById("section__read");
@@ -67,6 +68,19 @@ clickAdmin.addEventListener("click", () => {
   adminReturn();
 });
 
+//! ======== Accordion Start ==========
+
+accordion.addEventListener("click", (event) => {
+  accordion.classList.toggle("active");
+  let accordionBody = document.getElementById("accordion__body");
+  if (accordion.classList.contains("active")) {
+    accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+  } else {
+    accordionBody.style.maxHeight = 0;
+  }
+});
+//? ======== Accordion End ============
+
 // ! =========== Create Start ===========
 function createProduct(obj) {
   fetch(API, {
@@ -92,11 +106,11 @@ btnAdd.addEventListener("click", () => {
     return;
   }
   let obj = {
-    details: inpDetails.value,
+    detailes: inpDetails.value,
     price: inpPrice.value,
     quantity: inpQuantity.value,
     category: inpCategory.value,
-    sales: inpSales.value,
+    sale: inpSales.value,
     urlImg: inpUrl.value,
   };
   createProduct(obj);
@@ -122,35 +136,33 @@ function readProducts() {
       data.forEach((product) => {
         sectionRead.innerHTML += `
         <div class="card">
-        <h2>${product.category}</h2>
-        <img
-          class="card__bg"
-          src=${product.urlImg}
-          alt=${product.category}
-        />
-        <div>
-          <span class="card__price">${product.price}</span>
-          <span class="card__sales">${product.sales}</span>
-        </div>
-        <p>
-          ${product.details}
-        </p>
-        <div class="admin-panel">
+        <div class="card2">
+            <div class="front2" style="background-image: url(${product.urlImg});"></div>  
+           <div class="back2">
+            <div id="card_details2"><p>${product.detailes}</p></div>
+           </div>  
+          </div>
+          <div class="text">
+          <h2>${product.category}</h2>
+        <span class="card_price">Цена: ${product.price} сом</span>
+        <br>
+        <span class="card_sales">Cкидка: ${product.sale} %</span>
+            </div>
+            <div class= "userIcon" id="user-panel">
+            <img src="../images/сердце.png" alt="">
+            <button class="btnBuy">Выбрать</button>
+            </div>
+        <div class="admin-panel" id="admin">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/216/216658.png"
-            alt="delete"
+            src="https://cdn-icons-png.flaticon.com/512/1799/1799391.png"
+            alt=""
             width="30"
             id=${product.id}
-            class="read__del"
+            class="read_del"
             onclick="deleteProduct(${product.id})"
           />
-          <img
-            src="https://svgsilh.com/svg_v2/1103598.svg"
-            alt="edit"
-            width="30"
-            onclick="handleEditBtn(${product.id})"
-          />
-        </div> 
+          <img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" width="30" onclick="handleEditBtn(${product.id})"/>
+        </div>
       </div>
         `;
       });
@@ -211,10 +223,10 @@ function handleEditBtn(id) {
   fetch(`${API}/${id}`)
     .then((res) => res.json())
     .then((productObj) => {
-      inpEditDetails.value = productObj.details;
+      inpEditDetails.value = productObj.detailes;
       inpEditPrice.value = productObj.price;
       inpEditQuantity.value = productObj.quantity;
-      inpEditSales.value = productObj.sales;
+      inpEditSales.value = productObj.sale;
       inpEditCategory.value = productObj.category;
       inpEditUrl.value = productObj.urlImg;
       editId = productObj.id;
@@ -227,12 +239,12 @@ btnEditClose.addEventListener("click", () => {
 
 btnEditSave.addEventListener("click", () => {
   let editedObj = {
-    details: inpEditDetails.value,
+    detailes: inpEditDetails.value,
     price: inpEditPrice.value,
     quantity: inpEditQuantity.value,
     category: inpEditCategory.value,
     urlImg: inpEditUrl.value,
-    sales: inpEditSales.value,
+    sale: inpEditSales.value,
   };
   editProduct(editId, editedObj);
   mainModal.style.display = "none";

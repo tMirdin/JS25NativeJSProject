@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azret.kg</title>
+    <title>Coffee</title>
     <link rel="stylesheet" href="../css/product.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +29,18 @@
           </div>
           <div class="header_center">
             <ul>
-              <li>Главная</li>
-              <li>Продукты</li>
-              <li>О нас</li>
-              <li>Наши партнеры</li>
+              <a href="../html/main.html">
+                <li>Главная</li>
+              </a>
+              <a href="../html/product.html">
+                <li>Продукты</li>
+              </a>
+              <a href="../html/colloborate.html">
+                <li>О нас</li>
+              </a>
+              <a href="../html/about.html">
+                <li>Наши партнеры</li>
+              </a>
             </ul>
           </div>
 
@@ -53,32 +61,52 @@
         </div>
       </div>
     </div>
-    <!-- nav__right_btn-search -->
     <!-- ? ======== Navbar End ======== -->
     <!-- ! ========= Create Start ====== -->
     <section class="section__add">
-      <div>
+      <div class="accordion__header">Добавить товар</div>
+      <div id="accordion__body">
         <input
-          type="text"
           class="section__add_details"
+          type="text"
+          name=""
+          id=""
           placeholder="Описание"
         />
-        <input type="number" class="section__add_price" placeholder="Цена" />
         <input
+          class="section__add_price"
           type="number"
-          class="section__add_quantity"
-          placeholder="Количество"
+          name=""
+          id=""
+          placeholder="Цена"
         />
         <input
+          class="section__add_quantity"
           type="text"
+          name=""
+          id=""
+          placeholder="Наименование"
+        />
+        <input
           class="section__add_category"
+          type="text"
+          name=""
+          id=""
           placeholder="Категория"
         />
-        <input type="number" class="section__add_sales" placeholder="Скидки" />
         <input
-          type="url"
+          class="section__add_sales"
+          type="number"
+          name=""
+          id=""
+          placeholder="Скидки"
+        />
+        <input
           class="section__add_url"
-          placeholder="URL изображения"
+          type="url"
+          name=""
+          id=""
+          placeholder="URL изображение"
         />
         <button class="section__add_btn-add">Добавить</button>
       </div>
@@ -87,7 +115,7 @@
 
     <!-- ! ========Filter Start ======= -->
 
-    <form style="margin-left: 100px">
+    <form>
       <input type="radio" value="латте" name="coffee" />
       <label for="latte">Латте</label>
       <br />
@@ -144,6 +172,69 @@
       </div>
     </div>
     <!-- ? =========== Edit End ======= -->
+
+    <!-- ! ============ Footer Start =================== -->
+    <footer>
+      <div class="footerbg">
+        <div class="footer_one">
+          <img src="../images/logo.jpg" alt="" />
+          <h2>TROUBLE MAKERS</h2>
+          <br />
+        </div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores ab
+          voluptate expedita officiis quae deleniti? Saepe totam, modi quibusdam
+          sed nihil, necessitatibus veniam iure molestiae, dolores earum animi
+          voluptas maxime.
+        </p>
+      </div>
+      <div class="footer_text">
+        <ul>
+          <li>New York</li>
+          <li>London SF</li>
+          <li>Cockfosters BP</li>
+          <li>Los Angeles</li>
+          <li>Chicago</li>
+          <li>Las Vegas</li>
+        </ul>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Returns</li>
+          <li>Terms & Conditions</li>
+          <li>Contact Us</li>
+          <li>Latest News</li>
+          <li>Our Sitemap</li>
+        </ul>
+        <ul>
+          <li>Instagram profile</li>
+          <li>New Collection</li>
+          <li>Woman Dress</li>
+          <li>Contact Us</li>
+          <li>Latest News</li>
+          <li>Purchase Theme</li>
+        </ul>
+      </div>
+      <div class="wrapper">
+        <div class="icon facebook">
+          <div class="fooltip">Facebook</div>
+          <span><i class="fab fa-facebook-f"></i></span>
+        </div>
+        <div class="icon whatsapp">
+          <div class="fooltip">Whatsapp</div>
+          <span><i class="fab fa-whatsapp"></i></span>
+        </div>
+        <div class="icon instagram">
+          <div class="fooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+        <div class="icon telegram">
+          <div class="fooltip">Telegram</div>
+          <span><i class="fab fa-telegram"></i></span>
+        </div>
+      </div>
+      <!-- ! youtube end -->
+    </footer>
+    <!-- ? ============ Footer End =================== -->
 
     <script src="../js/product.js"></script>
   </body>

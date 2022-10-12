@@ -1,87 +1,67 @@
 {
   "product": [
     {
-      "details": "23456",
-      "price": "76543",
-      "nameProduct": "56865743",
-      "category": "латте",
-      "sales": "5456789",
-      "urlImg": "5456",
+      "detailes": "Latte",
+      "price": "300",
+      "quantity": "4",
+      "category": "Coffe Latte",
+      "sale": "10",
+      "urlImg": "https://coffee61.ru/wa-data/public/photos/68/03/368/368.970.jpg",
       "id": 1
     },
     {
-      "details": "4567",
-      "price": "887",
-      "quantity": "34567",
-      "category": "каппучино",
-      "sales": "567564",
-      "urlImg": "https://azbukakofe.ru/image/cache/data/napitki/latte-300x300.png",
-      "id": 2,
-      "nameProduct": "undefined"
+      "detailes": "Cappucino",
+      "price": "400",
+      "quantity": "1",
+      "category": "coffe Cappucinno",
+      "sale": "5",
+      "urlImg": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg",
+      "id": 2
     },
     {
-      "details": "5687",
-      "price": "6524356",
-      "quantity": "768",
-      "category": "американо",
-      "sales": "1234567876564534232123456",
-      "urlImg": "65678",
-      "id": 3,
-      "nameProduct": "undefined"
+      "detailes": "Americano",
+      "price": "200",
+      "quantity": "2",
+      "category": "Coffe Americano",
+      "sale": "5",
+      "urlImg": "https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA",
+      "id": 3
     },
     {
-      "details": "67",
-      "price": "78788",
-      "quantity": "787",
-      "category": "латте",
-      "sales": "87",
-      "urlImg": "87878",
+      "detailes": "Espresso",
+      "price": "180",
+      "quantity": "2",
+      "category": "Coffe Espresso",
+      "sale": "5",
+      "urlImg": "https://coffeeguycafe.com/wp-content/uploads/2019/01/Espresso-Coffee.jpg",
       "id": 4
     },
     {
-      "details": "5656",
-      "price": "56",
-      "quantity": "56",
-      "category": "каппучино",
-      "sales": "565",
-      "urlImg": "65656",
+      "detailes": "Affogato",
+      "price": "200",
+      "quantity": "2",
+      "category": "Coffe Affogato",
+      "sale": "5",
+      "urlImg": "https://static01.nyt.com/images/2021/08/15/magazine/affogato/affogato-articleLarge-v2.jpg",
       "id": 5
     },
     {
-      "details": "767",
-      "price": "76",
-      "quantity": "76",
-      "category": "американо",
-      "sales": "76",
-      "urlImg": "767",
+      "detailes": "Raf ",
+      "price": "200",
+      "quantity": "2",
+      "category": "Coffee Raf",
+      "sale": "5",
+      "urlImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6MnqA2TheCGWb55xgjLKC7iU1IU4ybjsQbw&usqp=CAU",
       "id": 6
     },
     {
-      "details": "76",
-      "price": "76",
-      "quantity": "76",
-      "category": "76",
-      "sales": "76",
-      "urlImg": "7676",
-      "id": 7
-    },
-    {
-      "details": "546789",
-      "price": "456789",
-      "nameProduct": "5786778",
-      "category": "787",
-      "sales": "7787878",
-      "urlImg": "787878",
+      "detailes": "cappucino",
+      "price": "200",
+      "quantity": "3",
+      "category": "Coffe Cappucino",
+      "sale": "5",
+      "urlImg": "https://www.tomtomcoffee.co.uk/wp-content/uploads/2021/04/Coffee-House-6.jpg",
       "id": 8
-    },
-    {
-      "details": "4567890",
-      "price": "0456",
-      "quantity": "789764",
-      "category": "56789",
-      "sales": "976456789",
-      "urlImg": "7",
-      "id": 9
     }
   ]
 }

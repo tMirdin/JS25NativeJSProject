@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e2ede9 !important;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.slide {
+  z-index: -1 !important;
+}
+
+.slide-title {
+  font-size: 4em;
+  color: #363434ad;
+}
+
+/* ! ========= Navbar Start ========== */
+
+.container1 {
+  width: 100%;
+}
+.block1 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1200px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 3px 0px 24px -7px black;
+}
+.header_logo1 {
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  letter-spacing: 1px;
+  font-family: sans-serif !important;
+  color: #353535;
+}
+.header_logo1 img {
+  width: 100px;
+  height: 55px;
+}
+
+.header_center1 ul {
+  font-size: 15px;
+  width: 400px;
+  color: #3e3e3e;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-family: system-ui;
+}
+.header_center1 ul li {
+  cursor: pointer;
+}
+
+.reg {
+  border: none;
+  background: none;
+}
+.header_right img {
+  width: 22px;
+  height: 22px;
+}
+.search-box1 {
+  background: #e2ede9;
+  padding: 10px 0;
+  border-radius: 40px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+.search-btn {
+  color: #022417;
+  float: right;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: #e2ede9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.search-box:hover > .search-txt {
+  width: 180px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background-color: #033723a3;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: rgb(6, 6, 6);
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  transition: 0.4s;
+}
+#open_admin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/yuanql/icon-admin.png);
+}
+
+/* ? ========= Navbar End ========== */
+/*  ! ====================== Video star ======================== */
+#video__block {
+  background: #e2ede9;
+}
+.video__block_glavnaya {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0;
+  /* background: rgba(11, 46, 39, 0.5); */
+}
+.video__block_glavnaya .video__block_left p {
+  font-size: 50px;
+  color: #114639;
+  font-weight: bold;
+}
+/*  ? ====================== Video star ======================== */
+
+/* ! ======================= new product block start ====================== */
+#new__product-block {
+  background: #f3f3f3;
+}
+.new__product-block-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+.new__product-block_text p {
+  font-size: 50px;
+  color: #114639;
+  font-weight: bold;
+  text-align: center;
+}
+/* ? ======================= new product block end ====================== */
+
+/* ! ======================= roasting block start ====================== */
+#roasting-block {
+  background: #e2ede9;
+}
+.roasting-block-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.roasting-block_text p {
+  font-size: 30px;
+  color: #114639;
+  font-weight: bold;
+}
+/* ? ======================= roasting block end ====================== */
+
+/* ! ======= Footer Start ================ */
+footer {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+}
+.footerbg p {
+  margin-left: 25px;
+  width: 350px;
+  font-family: system-ui;
+  /* letter-spacing: 0.2px; */
+  text-align: left;
+  color: #ffffff;
+}
+.footer_one {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.footer_text {
+  display: flex;
+  justify-content: center;
+}
+.footer_text ul {
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+  margin: 25px 20px 0px 20px;
+}
+.footer_text ul li {
+  margin-top: 10px;
+  font-family: system-ui;
+}
+.footer_one h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.footer_one img {
+  width: 100px;
+  height: 55px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+.wrapper .icon {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.wrapper .icon span {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  display: block;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i {
+  font-size: 25px;
+  line-height: 60px;
+}
+.wrapper .icon:hover span {
+  color: #fff;
+}
+.wrapper .icon .fooltip {
+  position: absolute;
+  top: 0px;
+  background: #fff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .fooltip {
+  top: -70%;
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .icon .fooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .fooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .fooltip,
+.wrapper .facebook:hover .fooltip ::before {
+  background: #113686;
+}
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .fooltip,
+.wrapper .whatsapp:hover .fooltip ::before {
+  background: #15a123;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .fooltip,
+.wrapper .instagram:hover .fooltip ::before {
+  background: #d13569;
+}
+.wrapper .telegram:hover span,
+.wrapper .telegram:hover .fooltip,
+.wrapper .telegram:hover .fooltip ::before {
+  background: #25a5dc;
+}
+/* ? ======= Footer End ================ */

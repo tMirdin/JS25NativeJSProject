@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e2ede9;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* ! ========= Navbar Start ========== */
+
+.container {
+  width: 100%;
+}
+.block {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1200px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 3px 0px 24px -7px black;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  color: #353535;
+}
+.header_logo img {
+  width: 100px;
+  height: 55px;
+}
+
+.header_center ul {
+  font-size: 15px;
+  width: 100%;
+  color: #3e3e3e;
+  /* font-weight: var(--wd-header-el-font-weight); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  list-style-type: none;
+  font-family: system-ui;
+}
+
+.reg {
+  border: none;
+  background: none;
+}
+.header_right img {
+  width: 22px;
+  height: 22px;
+}
+.search-box {
+  background: #e2ede9;
+  padding: 10px 0;
+  border-radius: 40px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+.search-btn {
+  color: #022417;
+  float: right;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: #e2ede9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.search-box:hover > .search-txt {
+  width: 180px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background-color: #033723a3;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: rgb(6, 6, 6);
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  transition: 0.4s;
+}
+#open_admin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1.5px solid black;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/yuanql/icon-admin.png);
+}
+
+/* ? ========= Navbar End ========== */
+
+/* ! ======== about us start ====== */
+
+.content {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-block {
+  margin: 50px 0;
+  width: 80%;
+  /* height: 300px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-img {
+  width: 50%;
+  height: 400px;
+  margin-right: 20px;
+}
+p {
+  font-size: 20px;
+  line-height: 25px;
+}
+.legacy {
+  font-style: normal;
+  font-weight: 100;
+}
+em {
+  font-weight: bold;
+  font-size: 25px;
+}
+.mission {
+  font-style: normal;
+  font-weight: 100;
+}
+.principes {
+  font-style: normal;
+  font-weight: 100;
+}
+.last-p {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 25px;
+}
+
+.photos {
+  background: url("../images/3.jpg");
+}
+.photos2 {
+  background: url("../images/5.jpg");
+}
+.photos3 {
+  background: url("../images/photo_2022-10-06_13-26-49.jpg");
+}
+.photos4 {
+  background: url("../images/6.jpg");
+}
+.photos5 {
+  background: url("../images/7.jpg");
+}
+.photos6 {
+  background: url("../images/8.jpg");
+}
+.photos7 {
+  background: url("../images/9.jpg");
+}
+.photos8 {
+  background: url("../images/2.jpg");
+}
+
+.photos,
+.photos2,
+.photos3,
+.photos4,
+.photos5,
+.photos6,
+.photos7,
+.photos8 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+  /* background-clip: content-box; */
+  background-repeat: no-repeat;
+}
+
+/* ? ======= about us end ====== */
+
+/* ! ======= Footer Start ================ */
+footer {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+}
+.footerbg p {
+  margin-left: 25px;
+  width: 350px;
+  font-family: system-ui;
+  font-size: inherit;
+  line-height: 20px;
+  /* letter-spacing: 0.2px; */
+  text-align: left;
+  color: #ffffff;
+}
+.footer_one {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.footer_text {
+  display: flex;
+  justify-content: center;
+}
+.footer_text ul {
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+  margin: 25px 20px 0px 20px;
+}
+.footer_text ul li {
+  margin-top: 10px;
+  font-family: system-ui;
+}
+.footer_one h2 {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.footer_one img {
+  width: 100px;
+  height: 55px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+.wrapper .icon {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.wrapper .icon span {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  display: block;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i {
+  font-size: 25px;
+  line-height: 60px;
+}
+.wrapper .icon:hover span {
+  color: #fff;
+}
+.wrapper .icon .fooltip {
+  position: absolute;
+  top: 0px;
+  background: #fff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .fooltip {
+  top: -70%;
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .icon .fooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .fooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .fooltip,
+.wrapper .facebook:hover .fooltip ::before {
+  background: #113686;
+}
+.wrapper .whatsapp:hover span,
+.wrapper .whatsapp:hover .fooltip,
+.wrapper .whatsapp:hover .fooltip ::before {
+  background: #15a123;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .fooltip,
+.wrapper .instagram:hover .fooltip ::before {
+  background: #d13569;
+}
+.wrapper .telegram:hover span,
+.wrapper .telegram:hover .fooltip,
+.wrapper .telegram:hover .fooltip ::before {
+  background: #25a5dc;
+}
+/* ? ======= Footer End ================ */
